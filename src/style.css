@@ -1,0 +1,39 @@
+* {
+  background: rgb(32,32,32);
+  color: whitesmoke;
+  font-family: avenir, arial, helvetica, sans-serif;
+  border-radius: 10px;
+  transition: 0.25s;
+}
+
+button {
+  padding: 10px;
+}
+
+button:hover, button:focus {
+  background: lime;
+  color: black;
+}
+
+a:hover, a:focus {
+  color: lime;
+}
+
+*:focus {
+  text-decoration: underline;
+}
+
+img {
+  background: #333;
+  width: 400px;
+  height: 300px;
+  display: block;
+  margin: 10px auto;
+  border: 0;
+}
+
+/**
+ * This file was first created using the Yeoman generator
+ * generator-hchiam-learning:
+ * https://www.npmjs.com/package/generator-hchiam-learning
+ */

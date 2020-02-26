@@ -1,0 +1,13 @@
+node_modules
+dist
+.cache
+.DS_Store
+coverage
+.lighthouseci
+*.report.html
+
+your_first_commit.sh
+
+# This file was first created using the Yeoman generator
+# generator-hchiam-learning:
+# https://www.npmjs.com/package/generator-hchiam-learning

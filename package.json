@@ -1,0 +1,42 @@
+{
+  "name": "learning-lazy-load",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Lazy Loading (image example) (This file was first created using the Yeoman generator generator-hchiam-learning: https://www.npmjs.com/package/generator-hchiam-learning",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "rm -rf dist || true; parcel src/index.html --out-dir dist --cache-dir .cache --open; # react-scripts start;",
+    "stop": "killall node",
+    "build": "rm -rf dist || true; parcel build src/index.html --out-dir dist --cache-dir .cache --no-source-maps; # react-scripts build;",
+    "lint": "eslint src/*.js src/**/*.js --max-warnings=0",
+    "fix": "eslint --fix src/*.js src/**/*.js --max-warnings=0",
+    "test": "",
+    "reminder": "echo; echo 'Reminders: \n\nDid you do \\033[1;34mnpm run build\\033[0m first? \nDo you need to \\033[1;34m[skip ci]\\033[0m? \n\\033[1;34mControl+C\\033[0m and \\033[1;34mnpm run stop\\033[0m to stop the \"start\" script.'; echo;"
+  },
+  "author": "hchiam",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@lhci/cli": "^0.3.8",
+    "cypress": "^4.0.2",
+    "cypress-plugin-snapshots": "^1.2.9",
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.18.3",
+    "husky": "^3.0.9",
+    "jest-cli": "^24.9.0",
+    "lighthouse": "^5.6.0",
+    "parcel-bundler": "^1.12.4",
+    "react-scripts": "^3.4.0"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/cypress"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run reminder; if (npm run fix && npm test); then npm run reminder; else (npm run reminder && exit 1); fi;"
+    }
+  }
+}
